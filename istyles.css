@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
+
+.container1 {
+  height: 100vh;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: auto;
+
+}
+
+.item1 {
+  font-size: 5rem;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.matrices {
+  background-color: rgba(193, 208, 181,0.9);
+  border: 1.2rem solid #99A98F;
+
+}
+
+.calculus {
+  background-color: rgba(172, 177, 214,0.9);
+  border: 1.2rem solid #8294C4;
+  text-align: center;
+}
+
+.coordinate {
+  background-color: rgba(200, 142, 167,0.9);
+  border: 1.2rem solid #99627A;
+
+}
+
+.basic {
+  background-color: rgba(225, 212, 187,0.9);
+  border: 1.2rem solid #CBB279;
+}
+
+@media screen and (max-width: 1060px) {
+.container1 {
+    grid-template-columns:  1fr; 
+    font-size: 3rem;
+  }
+  
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .container1 {
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  .item1 {
+    font-size: 1.8rem;
+    border-radius: 1rem;
+  }
+}

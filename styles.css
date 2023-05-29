@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('./images/back-ground3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.heading {
+  font-size: 6.5rem;
+  font-family: 'Source Code Pro', monospace;
+  display: inline-block;
+  padding: 5px;   
+  width: 50%;
+  margin-top: 8%;
+  margin-left: 25%;
+  color: #000000;
+  background-color: rgba(232, 232, 232,0.3);
+  text-align: center;
+  z-index: 1;
+}
+
+.navbar {
+  width: 100%;
+  margin: auto;
+  padding: 10px 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(74, 73, 78,0.9);
+  top: 0;
+  z-index: 0;
+  
+}
+
+.logo img {
+  height: 55px;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.headlogo {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Source Code Pro', monospace;
+  color: #ffffff;
+  padding-right: 40%;
+}
+
+.links li {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: 'Source Code Pro', monospace;
+  margin-right: 30px;
+  font-weight: 900;
+  position: relative;
+}
+
+.links li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.links li:hover::after {
+  width: 100%;
+}
+
+.links a {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+
+.btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  display: block;
+  width: 20%;
+  text-align: center;
+  margin-left: 40%;
+  background-color: #F0EEED;
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  text-align: center;
+  background: rgba(74, 73, 78,1);
+  color: #F0EEED;
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+span> p {
+  font-size: 2rem;
+  color: #F0EEED;
+}
+
+.btn:hover span {
+  width: 100%;
+  z-index: 1;
+}
+
+.btn:hover {
+  text-align: starts;
+}
+
+.click {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.handbtn {
+  padding-bottom: 180px;
+  margin-top: 100px;
+  height: 60vh;
+}
+
+.footer {
+  background-color: rgba(74, 73, 78,0.9);
+  padding: 20px;
+  color: #EEEEEE;
+  clear: both;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.footer-section {
+  width: 33%;
+  margin-bottom: 20px;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 10px;
+}
+
+.contact-list li,
+.social-media-list li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+.social-media-list li a {
+  color: #EEEEEE;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-media-list li a:hover {
+  color: #EEEEEE;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 70vh;
+  width: 60%;
+  background-color: rgba(240, 238, 237,0.9);
+  color: #000000;
+  margin-bottom: 30px;
+  margin-left: 20%;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 500px) {
+  .navbar {
+    width: 100%;
+  }
+  .logo img {
+    height: 55px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+  .headlogo {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+    color: #ffffff;
+    padding-right: 35%;
+  }
+  .links li {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-family: 'Source Code Pro', monospace;
+    margin-right: 30px;
+    font-weight: 900;
+    position: relative;
+  }
+  .heading {
+    font-size: 3rem;
+    font-family: 'Source Code Pro', monospace;
+    display: inline-block;
+    padding: 5px;   
+    width: 50%;
+    margin-top: 12%;
+    margin-left: 25%;
+    color: #000000;
+    background-color: rgba(232, 232, 232,0.3);
+    text-align: center;
+    z-index: 1;
+  }
+  .hidden {
+    margin: auto;
+    height: 50vh;
+  }
+  .footer-section {
+    display: block;
+    width: 100%;
+    font-size: smalls ;
+  }
+
+}
